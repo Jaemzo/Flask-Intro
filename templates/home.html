@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template Home Page</title>
+    <title>Home page!</title>
     <link
       rel="stylesheet"
-      href="{{url_for('static', filename='css/styles.css') }}"
+      href="{{ url_for('static', filename='css/styles.css') }}"
     />
-    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
   </head>
+
   <body>
-    <h1>Welcome to flask app</h1>
-    <p><a href="/time">See current server time</a></p>
+    <h1>WELCOME TO MY FLASK APP!</h1>
+    <p><a href="/time">SEE CURRENT TIME</a></p>
+    <p><a href="/form">GO TO THE FORM</a></p>
   </body>
 </html>

@@ -20,7 +20,7 @@
 
 # Create an instance of the Flask app
 import datetime
-from flask import Flask, render_template  # render templates loads HTML from /templates
+from flask import Flask, render_template, request  # render templates loads HTML from /templates
 app = Flask(__name__)
 
 # Define the route for a homepage:
@@ -32,6 +32,15 @@ def home():
     # return "<h1>Welcome to my Flask App!</h1>"
     # Return the home teplate:
     return render_template("home.html")
+
+
+@app.route("/form", methods=['GET', 'POST'])
+def form():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        ssn = request.form.get('ssn')
+        return render_template("greeting.html", name=name, ssn=ssn)
+    return render_template("form.html")
 
 
 @app.route("/time")
