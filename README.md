@@ -1,5 +1,5 @@
-#Flask Intro Project
-
+# Flask Intro Project
+ 
 ## To run:
 
 - clone the repo
